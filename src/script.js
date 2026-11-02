@@ -58,3 +58,8 @@ function renderBooks() {
   document.getElementById('emptyState').classList.toggle('hidden', filtered.length !== 0);
 }
 renderBooks();
+
+// Feature: Book Search Filter (CR-01)
+function searchBooks(query) {
+  console.log("Searching for:", query);
+}
