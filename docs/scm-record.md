@@ -44,3 +44,12 @@ Git and GitHub will be used to manage and track changes to the project throughou
 ## Date
 
 Practical Day 02
+
+# SCM Baseline Record
+
+Baseline: Initial Stable Release
+Baseline ID: BL-01
+Version: v0.1.0
+Date: 2026-11-02
+Included Changes: CR-01
+Status: Approved
