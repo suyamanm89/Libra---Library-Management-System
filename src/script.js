@@ -62,4 +62,4 @@ renderBooks();
 // Feature: Book Search Filter (CR-01)
 function searchBooks(query) {
   console.log("Searching for:", query);
-}
+} 
