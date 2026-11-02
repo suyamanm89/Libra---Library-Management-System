@@ -23,3 +23,7 @@ The objective of this project is to develop a simple web application that helps 
 1. Download or clone the project repository.
 2. Open the StudentTaskManagement folder in VS Code.
 3. Open src/index.html in a web browser to view the application.
+
+## Current Development Status
+Initial version completed.
+Version: 0.1.0
