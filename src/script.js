@@ -11,13 +11,16 @@ const bookForm = document.getElementById('bookForm');
 const searchInput = document.getElementById('searchInput');
 
 document.getElementById('today').textContent = '📅 ' + new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+
 document.getElementById('showFormBtn').addEventListener('click', () => {
   formWrap.classList.toggle('hidden');
   if (!formWrap.classList.contains('hidden')) document.getElementById('titleInput').focus();
 });
+
 document.getElementById('cancelBtn').addEventListener('click', () => {
   bookForm.reset(); formWrap.classList.add('hidden');
 });
+
 bookForm.addEventListener('submit', event => {
   event.preventDefault();
   const title = document.getElementById('titleInput').value.trim();
@@ -25,8 +28,9 @@ bookForm.addEventListener('submit', event => {
   const category = document.getElementById('categoryInput').value.trim();
   if (!title || !author || !category) return;
   books.unshift({ id: Date.now(), title, author, category, borrowed: false });
-  bookForm.reset(); formWrap.classList.add('hidden'); renderBooks();+
+  bookForm.reset(); formWrap.classList.add('hidden'); renderBooks();
 });
+
 searchInput.addEventListener('input', renderBooks);
 
 function renderBooks() {
@@ -62,4 +66,4 @@ renderBooks();
 // Feature: Book Search Filter (CR-01)
 function searchBooks(query) {
   console.log("Searching for:", query);
-} 
+}
