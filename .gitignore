@@ -1,5 +1,14 @@
-.vscode/
+# Operating system files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Editor settings
+.vscode/
+
+# Temporary files
 *.tmp
 *.log
+
+# Dependencies, if added later
+node_modules/
