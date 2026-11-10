@@ -53,3 +53,20 @@ Practical Day 02
 - Date: 2026-11-02
 - Included Changes: CR-01
 - Status: Approved
+
+
+## Branching Strategy
+
+The project follows a Feature Branch Workflow.
+
+### Main Branch
+Contains the stable and integrated version of the Libra Library Management System.
+
+### feature/CR-02-ui-update
+Used by Student A to implement user interface improvements.
+
+### feature/CR-03-validation
+Used by Student B to implement input validation.
+
+### Justification
+The Feature Branch Workflow allows developers to work independently without directly modifying the main branch. It also makes it easier to review, test, and integrate changes while reducing the risk of affecting the stable version of the application.

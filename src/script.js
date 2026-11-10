@@ -26,8 +26,34 @@ bookForm.addEventListener('submit', event => {
   const title = document.getElementById('titleInput').value.trim();
   const author = document.getElementById('authorInput').value.trim();
   const category = document.getElementById('categoryInput').value.trim();
-  if (!title || !author || !category) return;
-  books.unshift({ id: Date.now(), title, author, category, borrowed: false });
+  // CR-03: Input Validation
+
+if (!title || !author || !category) {
+  alert("Please fill in all fields.");
+  return;
+}
+
+// Check whether the book already exists
+const duplicate = books.some(book =>
+  book.title.toLowerCase() === title.toLowerCase() &&
+  book.author.toLowerCase() === author.toLowerCase()
+);
+
+if (duplicate) {
+  alert("This book already exists!");
+  return;
+}
+
+// Add the new book
+books.unshift({
+  id: Date.now(),
+  title,
+  author,
+  category,
+  borrowed: false
+});
+
+alert("Book added successfully!");
   bookForm.reset(); formWrap.classList.add('hidden'); renderBooks();
 });
 
@@ -66,4 +92,6 @@ renderBooks();
 // Feature: Book Search Filter (CR-01)
 function searchBooks(query) {
   console.log("Searching for:", query);
-}
+} 
+
+if (!title || !author || !category) return;
